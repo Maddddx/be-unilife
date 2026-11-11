@@ -235,5 +235,6 @@ Landing (hook + "ไม่เก็บข้อมูล") → แผนที�
 - Dev shortcut: `?dev=<stationId>` / `?dev=graduation` / `?dev=reveal`
 - ✅ **Checkpoint A ผ่าน** + brand/CI v1 (ดู `docs/DESIGN.md`): Jester + Sage, CI สมุดจดไฮไลต์, mascot "ต่อม", share card ใบเกรดล้อเลียน
 - ✅ **Phase 1 เสร็จ** (2026-11-11): 5 station merge แล้ว + ตัวเลขงานวิจัยยืนยันกับต้นฉบับครบ 8 แหล่ง
-- ⏭️ **ถัดไป: Phase 2** (Reveal เต็ม + share card ใบเกรด) เดิม: Phase 1 ตามหัวข้อ 13: แตก subagent 5 ตัว (หนึ่งตัวต่อ station ใน worktree แยก แตะเฉพาะ `src/stations/<id>/`) + 1 ตัวตรวจตัวเลขงานวิจัย → orchestrator merge + ตรวจเอง
+- ✅ **Phase 2 เสร็จ**: reveal ทีละวิชา (mechanism-first), ใบ transcript สาย Homo economicus (A = rational, F = มนุษย์เต็มตัว), GPA, radar, PNG, หน้าที่มา/ข้อจำกัด; logic เกรดใน `src/core/transcript.ts`; `?dev=reveal` ใช้ผล demo
+- ⏭️ **ถัดไป:** ผู้ใช้รีวิวชื่อวิชา/หมายเหตุอาจารย์ใน `COURSES` → Phase 3 QA → Phase 4 ship. เดิม: Phase 1 ตามหัวข้อ 13: แตก subagent 5 ตัว (หนึ่งตัวต่อ station ใน worktree แยก แตะเฉพาะ `src/stations/<id>/`) + 1 ตัวตรวจตัวเลขงานวิจัย → orchestrator merge + ตรวจเอง
 - ยังค้าง: ชื่อในไฟล์ส่งงาน (`befreeform_<ชื่อ>.pdf`), เลือก host + ขออนุญาต push (Phase 4)

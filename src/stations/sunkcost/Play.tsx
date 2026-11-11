@@ -180,7 +180,7 @@ export function Play({ onComplete, rng }: StationPlayProps<Raw>) {
       </div>
 
       {/* deck */}
-      <div className="relative min-h-[300px] flex-1">
+      <div className="relative max-h-[400px] min-h-[300px] flex-1">
         {index < deck.length - 1 && (
           <div
             aria-hidden
@@ -193,12 +193,12 @@ export function Play({ onComplete, rng }: StationPlayProps<Raw>) {
       </div>
 
       {showMascot ? (
-        <div className="flex items-center gap-3">
+        <div className="mt-auto flex items-center gap-3">
           <Mascot pose="sly" size={56} />
           <Bubble>ครึ่งทางแล้ว ตอบแบบที่จะทำจริง ๆ นะ ไม่มีใครแอบดู</Bubble>
         </div>
       ) : (
-        <p className="text-center text-sm text-muted">ปัดการ์ดซ้ายหรือขวาก็ได้ หรือกดปุ่มข้างล่าง</p>
+        <p className="mt-auto text-center text-sm text-muted">ปัดการ์ดซ้ายหรือขวาก็ได้ หรือกดปุ่มข้างล่าง</p>
       )}
 
       {/* choices — left = stop, right = go, same positions on every card */}
