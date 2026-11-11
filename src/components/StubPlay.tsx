@@ -1,3 +1,4 @@
+import { Construction } from 'lucide-react'
 import { Button } from './Button'
 
 /**
@@ -6,9 +7,13 @@ import { Button } from './Button'
  */
 export function StubPlay({ label, onDone }: { label: string; onDone: () => void }) {
   return (
-    <div className="flex flex-col items-center gap-4 rounded-(--radius-card) border-2 border-dashed border-line bg-card p-8 text-center">
-      <p className="text-muted">🚧 ฉาก "{label}" กำลังสร้าง</p>
-      <Button onClick={onDone}>ข้ามไปก่อน</Button>
+    <div className="flex flex-col items-center gap-4 rounded-(--radius-card) border-2 border-dashed border-ink/30 bg-card p-8 text-center">
+      <p className="flex items-center gap-2 text-muted">
+        <Construction size={18} aria-hidden /> ฉาก "{label}" กำลังสร้าง
+      </p>
+      <Button variant="ghost" onClick={onDone}>
+        ข้ามไปก่อน
+      </Button>
     </div>
   )
 }

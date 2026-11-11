@@ -67,7 +67,7 @@ export interface StationDef<Raw = unknown> {
   title: string
   /** neutral 1–3 sentence narrative shown before play */
   intro: string
-  /** emoji used as the moment's icon */
+  /** emoji kept as a text fallback only — UI renders the vector icon from components/StationIcon */
   icon: string
   Play: ComponentType<StationPlayProps<Raw>>
   score: (raw: Raw) => TraitScore

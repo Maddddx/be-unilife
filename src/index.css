@@ -1,29 +1,46 @@
 @import 'tailwindcss';
 
+/*
+ * CI "ปากกาไฮไลต์" — navy ink line-work + highlighter marks on clean paper.
+ * Every year of uni owns one highlighter colour. Full spec: docs/DESIGN.md
+ */
 @theme {
   --font-sans: 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Prompt', 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
 
   /* surfaces + ink */
-  --color-paper: #fbf6ee;
+  --color-paper: #f6f7fb;
   --color-card: #ffffff;
-  --color-line: #ece3d6;
-  --color-ink: #2b2622;
-  --color-muted: #6f655c;
+  --color-line: #e3e5ee;
+  --color-ink: #1e2240; /* uniform navy: text, outlines, primary buttons */
+  --color-muted: #5c6178;
 
-  /* one accent per university year */
-  --color-y1: #e8674d; /* coral */
-  --color-y1-soft: #fde4dc;
-  --color-y2: #d9961f; /* amber */
-  --color-y2-soft: #fbefd3;
-  --color-y3: #1f9486; /* teal */
-  --color-y3-soft: #d6f1ec;
-  --color-y4: #5157c9; /* indigo */
-  --color-y4-soft: #e3e4fa;
-  --color-grad: #b8862b; /* graduation gold */
+  /* one highlighter per university year
+     mark = the highlighter itself (fills, never text)
+     deep = same hue dark enough for text on white (>= 4.5:1)
+     soft = faint tint for large surfaces */
+  --color-y1: #ffe94d; /* yellow */
+  --color-y1-deep: #7a6500;
+  --color-y1-soft: #fffbd6;
+  --color-y2: #ff9fcd; /* pink */
+  --color-y2-deep: #b8155f;
+  --color-y2-soft: #ffeaf4;
+  --color-y3: #7de8b4; /* mint */
+  --color-y3-deep: #0a7446;
+  --color-y3-soft: #e0f8ec;
+  --color-y4: #8fd0ff; /* sky */
+  --color-y4-deep: #1c5fbd;
+  --color-y4-soft: #e3f2ff;
+  --color-grad: #ffb45c; /* graduation orange */
+  --color-grad-deep: #a84c00;
+  --color-grad-soft: #fff0dc;
 
   --radius-card: 1.25rem;
-  --shadow-card: 0 1px 2px rgb(43 38 34 / 0.06), 0 8px 24px -12px rgb(43 38 34 / 0.18);
+  --radius-tile: 1rem;
+  /* "sticker" depth: a hard ink offset instead of a blurry shadow */
+  --shadow-sticker: 0 4px 0 var(--color-ink);
+  --shadow-sticker-pressed: 0 1px 0 var(--color-ink);
+  --shadow-card: 0 1px 0 var(--color-line), 0 12px 28px -18px rgb(30 34 64 / 0.35);
 }
 
 :root {
@@ -59,8 +76,8 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-y4);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-y4-deep);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -9,13 +9,30 @@ import { thesis } from './thesis'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const STATIONS: StationDef<any>[] = [scroll, paylater, sunkcost, groupwork, thesis]
 
-export const YEAR_ACCENT: Record<number, { solid: string; soft: string }> = {
-  1: { solid: 'var(--color-y1)', soft: 'var(--color-y1-soft)' },
-  2: { solid: 'var(--color-y2)', soft: 'var(--color-y2-soft)' },
-  3: { solid: 'var(--color-y3)', soft: 'var(--color-y3-soft)' },
-  4: { solid: 'var(--color-y4)', soft: 'var(--color-y4-soft)' },
+export interface Accent {
+  /** highlighter colour: fills, marks, buttons with ink text. Never use as text colour. */
+  mark: string
+  /** same hue, dark enough for text on white */
+  deep: string
+  /** faint tint for large surfaces */
+  soft: string
 }
 
+const accent = (k: string): Accent => ({
+  mark: `var(--color-${k})`,
+  deep: `var(--color-${k}-deep)`,
+  soft: `var(--color-${k}-soft)`,
+})
+
+export const YEAR_ACCENT: Record<number, Accent> = {
+  1: accent('y1'),
+  2: accent('y2'),
+  3: accent('y3'),
+  4: accent('y4'),
+}
+
+export const GRAD_ACCENT: Accent = accent('grad')
+
 export function momentLabel(def: Pick<StationDef, 'year' | 'term'>): string {
-  return def.term ? `ปี ${def.year} · เทอม ${def.term}` : `ปี ${def.year}`
+  return def.term ? `ปี ${def.year} เทอม ${def.term}` : `ปี ${def.year}`
 }

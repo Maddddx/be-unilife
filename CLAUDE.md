@@ -19,9 +19,15 @@ biases, the mechanism behind each, the research, and how to cope. Full idea + pl
 8. All user-facing copy is **Thai**; keep technical BE terms in English (present bias, sunk cost, ...).
 9. Git is **local only. Never push / create remotes** unless the user explicitly asks.
 
+## Design
+Brand + CI live in **`docs/DESIGN.md`** (archetype Jester + Sage, voice "เพื่อนสนิทที่ชอบแซว", ink + highlighter CI,
+mascot "ต่อม"). Follow it for every screen. Key rules: highlighter colours (`YEAR_ACCENT[y].mark`) are fills only —
+text uses `.deep`; icons via `StationIcon`/`lucide-react`, never emoji; use `Button`, `IconTile`, `Highlight`, `Mascot`
+from `src/components/`. Design skills: `.claude/skills/frontend-design`, `.claude/skills/ui-ux-pro-max`.
+
 ## Stack
 Vite + React 19 + TypeScript · Tailwind v4 (`@tailwindcss/vite`, tokens in `src/index.css` `@theme`) ·
-`motion` (Framer Motion, import from `motion/react`) · Zustand · Recharts · html-to-image · Vitest.
+`motion` (Framer Motion, import from `motion/react`) · `lucide-react` icons · Zustand · Recharts · html-to-image · Vitest.
 
 ## Commands
 - `npm run dev` — dev server (http://localhost:5173)
