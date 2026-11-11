@@ -25,7 +25,7 @@ import {
 import { Button } from '../../components/Button'
 import { Bubble, Mascot } from '../../components/Mascot'
 import type { StationPlayProps } from '../../core/types'
-import { YEAR_ACCENT } from '../registry'
+import { YEAR_ACCENT } from '../../core/accent'
 import { makeCards, type FeedCard, type Topic } from './feed'
 import {
   FEED_CAP_SEC,

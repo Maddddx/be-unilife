@@ -11,11 +11,11 @@ import { Dumbbell, GraduationCap, Lightbulb, Ticket, type LucideIcon } from 'luc
 import { Button } from '../../components/Button'
 import { Bubble, Mascot } from '../../components/Mascot'
 import type { StationPlayProps } from '../../core/types'
-import { YEAR_ACCENT } from '../registry'
+import { YEAR_ACCENT } from '../../core/accent'
 import type { Answer, Choice, Raw } from './metrics'
 import { arrangeDeck, type PairId, type Scenario } from './scenarios'
 
-// read lazily: registry imports this module, so a top-level read would hit a circular-import TDZ
+// year 2 accent (core/accent has no import cycle, so a constant would also work)
 const accent = () => YEAR_ACCENT[2]
 
 const PAIR_ICON: Record<PairId, LucideIcon> = {
