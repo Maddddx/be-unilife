@@ -5,7 +5,7 @@ import { Button } from '../../components/Button'
 import { Bubble, Mascot } from '../../components/Mascot'
 import type { StationPlayProps } from '../../core/types'
 import { shuffle } from '../../core/rng'
-import { YEAR_ACCENT } from '../registry'
+import { YEAR_ACCENT } from '../../core/accent'
 import { PLAY } from './content'
 import { ENDOWMENT, LEVELS, type CondAnswer, type Raw } from './metrics'
 
