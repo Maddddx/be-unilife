@@ -227,3 +227,11 @@ Landing (hook + "ไม่เก็บข้อมูล") → แผนที�
 - Social preference, reciprocity, social norm → `11_Social_Preference.md`, `12_Social_Preference_Applications.md`
 - Nudge/default/dark nudge (ใช้ตอน reveal "แก้ยังไง") → `2_`–`5_`
 - Field experiment design (between-subject, randomization) → `13_Case_Study_Racial_Bias_in_Hiring.md`
+
+## 14. สถานะล่าสุด / Handoff (2026-11-11)
+
+- ✅ **Phase 0 เสร็จ** (commit `e390d03`, local only): scaffold, contract (`src/core/types.ts`), store, RNG, sources (ยัง `verified: false` ทุกตัว), ฉาก landing → intro → play → memory → graduation → reveal (ร่าง), station stub 5 ตัวเล่นผ่านได้ครบ, build/test/lint ผ่าน, ตรวจใน browser แล้ว
+- โปรเจกต์ย้ายออกจาก `EC416/BE_Freeform_Project` มาที่นี่ เพื่อไม่ให้ CLAUDE.md ติวเตอร์ของ EC416 มีผล
+- Dev shortcut: `?dev=<stationId>` / `?dev=graduation` / `?dev=reveal`
+- ⏭️ **ถัดไป: Checkpoint A** (ผู้ใช้ดู look & feel) → **Phase 1** ตามหัวข้อ 13: แตก subagent 5 ตัว (หนึ่งตัวต่อ station ใน worktree แยก แตะเฉพาะ `src/stations/<id>/`) + 1 ตัวตรวจตัวเลขงานวิจัย → orchestrator merge + ตรวจเอง
+- ยังค้าง: ชื่อในไฟล์ส่งงาน (`befreeform_<ชื่อ>.pdf`), เลือก host + ขออนุญาต push (Phase 4)
