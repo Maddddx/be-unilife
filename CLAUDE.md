@@ -22,7 +22,7 @@ biases, the mechanism behind each, the research, and how to cope. Full idea + pl
 ## Design
 Brand + CI live in **`docs/DESIGN.md`** (archetype Jester + Sage, voice "เพื่อนสนิทที่ชอบแซว", ink + highlighter CI,
 mascot "ต่อม"). Follow it for every screen. Key rules: highlighter colours (`YEAR_ACCENT[y].mark`) are fills only —
-text uses `.deep`; icons via `StationIcon`/`lucide-react`, never emoji; use `Button`, `IconTile`, `Highlight`, `Mascot`
+text uses `.deep` (import from `src/core/accent.ts`, never from `stations/registry` inside a station); icons via `StationIcon`/`lucide-react`, never emoji; use `Button`, `IconTile`, `Highlight`, `Mascot`
 from `src/components/`. Design skills: `.claude/skills/frontend-design`, `.claude/skills/ui-ux-pro-max`.
 
 ## Stack

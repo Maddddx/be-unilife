@@ -29,7 +29,7 @@ station's mechanic), `src/core/types.ts` (contract), `src/core/levels.ts`, `src/
    `mechanism` (why the brain does it — mechanism first, 2–4 sentences), `research` (ResearchNote[] using existing
    `sourceId`s from sources.ts; **no numbers** — every source is still `verified: false`; state the sample/limitation
    in `caveat`), `inLife`, `howToCope`, `courseLink`. Thai, BE terms in English.
-6. Visual style: ink + highlighter CI from DESIGN.md. Use `YEAR_ACCENT[year].mark` for fills only, `.deep` for
+6. Visual style: ink + highlighter CI from DESIGN.md. Import `YEAR_ACCENT` from `src/core/accent.ts` (NOT from registry — circular import). Use `YEAR_ACCENT[year].mark` for fills only, `.deep` for
    coloured text; icons from `lucide-react` (already installed), never emoji as icons. Invented brand names only.
    The mascot "ต่อม" may appear at most once during play with a neutral tease.
 
