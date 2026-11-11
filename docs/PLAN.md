@@ -60,7 +60,7 @@
 - **Interact:** ทายก่อนว่าจะไถกี่นาที (จำกัดสูงสุด ~2.5 นาที) → เข้า feed จำลองแบบ infinite scroll จับเวลาจริง → รอบสองเลือกได้ว่าจะตั้ง limit ให้ตัวเองไหม
 - **วัด:** ทาย vs จริง (naivete) · เลือก commit หรือไม่ (sophistication)
 - **Reveal:** present bias/self-control gap, ผลของ commitment
-- **หลักฐาน:** Allcott–Gentzkow–Song (Digital Addiction): self-control problems + habit formation อธิบายการใช้โซเชียลเฉลี่ย **31% (~48 นาที/วัน)**; การตั้ง limit ลดเวลาลงราว **17%** — แต่ sample เป็น **ผู้ใหญ่ 18–64 ในสหรัฐ** ไม่ใช่นักศึกษา
+- **หลักฐาน:** Allcott–Gentzkow–Song (Digital Addiction): self-control problems + habit formation อธิบายการใช้โซเชียลเฉลี่ย **31% (~48 นาที/วัน)**; การตั้ง limit ลดเวลาลงราว **16%** (ยืนยันแล้ว) — แต่ sample เป็น **ผู้ใหญ่ 18–64 ในสหรัฐ** ไม่ใช่นักศึกษา
 - **ระวัง:** การไถใน demo feed ≠ การใช้โซเชียลจริง; feed ต้องออกแบบเองไม่ลอก TikTok
 
 ### Station "Pay-later" (ปี 1 เทอม 2)
@@ -80,7 +80,7 @@
 - **Interact:** strategy method: "ถ้าเพื่อนลงแรงเฉลี่ย 0 / 3 / 6 / 9 จาก 10 คุณจะลงเท่าไร" (slider)
 - **วัด:** ความชันของคำตอบ → free-rider / conditional cooperator / unconditional contributor
 - **Reveal:** social preference, reciprocity (บท 11–12)
-- **หลักฐาน:** งานคลาสสิกของ Fischbacher–Gächter–Fehr — **ผมจำได้จากความจำ ยังไม่ได้ค้น/ยืนยันตัวเลข ต้องเปิดต้นฉบับก่อนอ้าง**
+- **หลักฐาน:** Fischbacher–Gächter–Fehr (2001): conditional cooperator 22/44 (50%), free rider ~1/3, hump-shaped 14% — ยืนยันแล้ว (N=44 Zurich)
 
 ### Station "วางแผน vs ตัวเองตอนดึก" (ปี 4)
 - **Interact:** ตั้ง deadline ย่อยของงาน 3 ชิ้น (ชิดหรือห่าง) + วางแผนชั่วโมงต่อวัน → จำลอง 14 วันที่มีสิ่งยั่วยวนสุ่ม (เพื่อนชวน, ซีรีส์) ให้เลือกทำงานหรือเล่น
@@ -88,8 +88,8 @@
 - **Reveal:** procrastination, planner–doer (บท 6)
 - **หลักฐาน:**
   - Ariely & Wertenbroch (2002): นักศึกษาตั้ง deadline ให้ตัวเอง แต่ได้ผลน้อยกว่า deadline ที่คนอื่นกำหนด
-  - Bisin & Hyndman (NBER w19874): นักศึกษา demand deadline สูง แต่ deadline **ไม่ได้** ทำให้งานเสร็จมากขึ้น; present bias ราว 30–40% ของ sample → **ขัดกับงานแรกบางส่วน ผลยังไม่ลงตัว reveal ห้ามสรุปเกินจริง**
-  - Planning fallacy: ตัวเลข "14%–102% overconfident" มาจาก **textbook สรุปรอง** (ผลวิจัย 1994 เรื่องเวลาทำธีสิส) ยังไม่ยืนยันกับต้นฉบับ
+  - Bisin & Hyndman (NBER w19874): นักศึกษา demand deadline สูง แต่ deadline **ไม่ได้** ทำให้งานเสร็จมากขึ้น; present bias ราว **42%** ของ sample (ฉบับตีพิมพ์ 2020; ร่าง NBER เดิมบอก ~30%) → **ขัดกับงานแรกบางส่วน ผลยังไม่ลงตัว reveal ห้ามสรุปเกินจริง**
+  - Planning fallacy: ตัวเลข "14%–102% overconfident" **ไม่มีในงาน 1994** ห้ามใช้; ตัวเลขที่ยืนยันแล้ว: คาด 33.9 วัน จริง 55.5 วัน (Table 1)
 
 ## 5. Tools และ Architecture
 
@@ -144,8 +144,8 @@ Landing (hook + "ไม่เก็บข้อมูล") → แผนที�
 
 ## 9. ความเสี่ยงและสิ่งที่ยังไม่ verify
 
-- [ ] เปิด **paper ต้นฉบับ** ยืนยันตัวเลขทุกตัวก่อนใส่ในหน้า "ที่มา" (ส่วนใหญ่ตอนนี้มาจากผลค้นหา/abstract/สรุปรอง)
-- [ ] ตัวเลข Fischbacher–Gächter–Fehr ยังไม่ได้ค้นเลย
+- [x] เปิด **paper ต้นฉบับ** ยืนยันตัวเลขทุกตัวแล้ว (ดู `facts` ใน `src/core/sources.ts`)
+- [x] ตัวเลข Fischbacher–Gächter–Fehr ยืนยันแล้ว
 - [ ] งานวิจัยส่วนใหญ่ **ไม่ได้ทำกับ นศ. ไทย** — ต้องบอก sample ของแต่ละ benchmark
 - [ ] ผล deadline/procrastination ยังขัดแย้งกันในวรรณกรรม — reveal ต้องสะท้อนความไม่แน่นอน
 - [ ] เกณฑ์ ต่ำ/กลาง/สูง เป็นของเราเอง ไม่ใช่ norm
@@ -234,5 +234,6 @@ Landing (hook + "ไม่เก็บข้อมูล") → แผนที�
 - โปรเจกต์ย้ายออกจาก `EC416/BE_Freeform_Project` มาที่นี่ เพื่อไม่ให้ CLAUDE.md ติวเตอร์ของ EC416 มีผล
 - Dev shortcut: `?dev=<stationId>` / `?dev=graduation` / `?dev=reveal`
 - ✅ **Checkpoint A ผ่าน** + brand/CI v1 (ดู `docs/DESIGN.md`): Jester + Sage, CI สมุดจดไฮไลต์, mascot "ต่อม", share card ใบเกรดล้อเลียน
-- ⏭️ **ถัดไป: Phase 1** ตามหัวข้อ 13: แตก subagent 5 ตัว (หนึ่งตัวต่อ station ใน worktree แยก แตะเฉพาะ `src/stations/<id>/`) + 1 ตัวตรวจตัวเลขงานวิจัย → orchestrator merge + ตรวจเอง
+- ✅ **Phase 1 เสร็จ** (2026-11-11): 5 station merge แล้ว + ตัวเลขงานวิจัยยืนยันกับต้นฉบับครบ 8 แหล่ง
+- ⏭️ **ถัดไป: Phase 2** (Reveal เต็ม + share card ใบเกรด) เดิม: Phase 1 ตามหัวข้อ 13: แตก subagent 5 ตัว (หนึ่งตัวต่อ station ใน worktree แยก แตะเฉพาะ `src/stations/<id>/`) + 1 ตัวตรวจตัวเลขงานวิจัย → orchestrator merge + ตรวจเอง
 - ยังค้าง: ชื่อในไฟล์ส่งงาน (`befreeform_<ชื่อ>.pdf`), เลือก host + ขออนุญาต push (Phase 4)
