@@ -25,3 +25,7 @@ dist-ssr
 
 # Claude Code subagent worktrees
 .claude/worktrees/
+
+# kept locally, not published (third-party skills; course handout)
+.claude/skills/
+docs/EC416_BEFreeform_guideline.pdf
