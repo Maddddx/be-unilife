@@ -17,7 +17,7 @@ import {
 import { Button } from '../../components/Button'
 import { Bubble, Mascot } from '../../components/Mascot'
 import type { StationPlayProps } from '../../core/types'
-import { YEAR_ACCENT } from '../registry'
+import { YEAR_ACCENT } from '../../core/accent'
 import { SHOP_NAME } from './content'
 import type { OfferRecord, Raw } from './metrics'
 import {
