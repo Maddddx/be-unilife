@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState, type ReactNode } from 'react'
+import { YEAR_ACCENT } from '../../core/accent'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import {
   Cake,
@@ -31,9 +32,7 @@ import {
   type Raw,
 } from './metrics'
 
-// Same values as YEAR_ACCENT[4] in ../registry. Importing registry here would create an import cycle
-// (registry → thesis → registry) that crashes at module init, so the year-4 tokens are referenced directly.
-const ACCENT = { mark: 'var(--color-y4)', deep: 'var(--color-y4-deep)', soft: 'var(--color-y4-soft)' }
+const ACCENT = YEAR_ACCENT[4]
 const DAY_NUMS = Array.from({ length: DAYS }, (_, i) => i + 1)
 
 const TEMPT_ICON: Record<string, LucideIcon> = {
