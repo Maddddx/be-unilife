@@ -1,0 +1,43 @@
+import { useEffect } from 'react'
+import { AnimatePresence } from 'motion/react'
+import { useGame, type Phase } from './core/store'
+import { STATIONS } from './stations/registry'
+import { Landing } from './scenes/Landing'
+import { YearIntro } from './scenes/YearIntro'
+import { StationRunner } from './scenes/StationRunner'
+import { Memory } from './scenes/Memory'
+import { Graduation } from './scenes/Graduation'
+import { Reveal } from './scenes/Reveal'
+
+/**
+ * Dev shortcut (dev server only): ?dev=<stationId> opens that station's play screen,
+ * ?dev=reveal opens the reveal, ?dev=graduation opens graduation.
+ */
+function useDevJump() {
+  const jump = useGame((s) => s.jump)
+  useEffect(() => {
+    if (!import.meta.env.DEV) return
+    const target = new URLSearchParams(window.location.search).get('dev')
+    if (!target) return
+    const i = STATIONS.findIndex((s) => s.id === target)
+    if (i >= 0) jump('play', i)
+    else if (target === 'reveal' || target === 'graduation') jump(target as Phase, STATIONS.length - 1)
+  }, [jump])
+}
+
+export default function App() {
+  const phase = useGame((s) => s.phase)
+  const index = useGame((s) => s.index)
+  useDevJump()
+
+  return (
+    <AnimatePresence mode="wait">
+      {phase === 'landing' && <Landing key="landing" />}
+      {phase === 'intro' && <YearIntro key={`intro-${index}`} />}
+      {phase === 'play' && <StationRunner key={`play-${index}`} />}
+      {phase === 'memory' && <Memory key={`memory-${index}`} />}
+      {phase === 'graduation' && <Graduation key="graduation" />}
+      {phase === 'reveal' && <Reveal key="reveal" />}
+    </AnimatePresence>
+  )
+}

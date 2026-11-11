@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Prompt', 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
+
+  /* surfaces + ink */
+  --color-paper: #fbf6ee;
+  --color-card: #ffffff;
+  --color-line: #ece3d6;
+  --color-ink: #2b2622;
+  --color-muted: #6f655c;
+
+  /* one accent per university year */
+  --color-y1: #e8674d; /* coral */
+  --color-y1-soft: #fde4dc;
+  --color-y2: #d9961f; /* amber */
+  --color-y2-soft: #fbefd3;
+  --color-y3: #1f9486; /* teal */
+  --color-y3-soft: #d6f1ec;
+  --color-y4: #5157c9; /* indigo */
+  --color-y4-soft: #e3e4fa;
+  --color-grad: #b8862b; /* graduation gold */
+
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(43 38 34 / 0.06), 0 8px 24px -12px rgb(43 38 34 / 0.18);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-y4);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
